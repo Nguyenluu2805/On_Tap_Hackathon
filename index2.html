@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLib - Thư Viện Tri Thức</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. PALETTE MÀU HỌC THUẬT --- */
+        :root {
+            --primary-brown: #5D4037; /* Nâu cà phê */
+            --accent-gold: #D4A373;   /* Vàng bìa sách cũ */
+            --bg-paper: #FAF9F6;      /* Màu trắng ngà (màu giấy) */
+            --text-dark: #3E2723;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-paper);
+            color: var(--text-dark);
+        }
+
+        /* Font riêng cho tiêu đề (Serif) nhìn cho "trí tuệ" */
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* --- 2. CUSTOM CSS --- */
+        
+        /* Chữ màu nâu chủ đạo */
+        .text-brown { color: var(--primary-brown) !important; }
+        .bg-brown { background-color: var(--primary-brown) !important; }
+
+        /* Nút bấm trang nhã */
+        .btn-library {
+            background-color: var(--primary-brown);
+            color: white;
+            border-radius: 4px; /* Bo góc ít thôi cho nghiêm túc */
+            padding: 12px 30px;
+            font-weight: 500;
+            border: 1px solid var(--primary-brown);
+            transition: 0.3s;
+        }
+        .btn-library:hover {
+            background-color: white;
+            color: var(--primary-brown);
+        }
+
+        /* Ảnh sách 3D nhẹ */
+        .book-image {
+            box-shadow: 20px 20px 0px var(--accent-gold); /* Bóng cứng tạo khối */
+            border-radius: 5px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Đường kẻ dọc trang trí ở phần Stats */
+        .border-left-custom {
+            border-left: 4px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-3 border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-brown" href="#">
+                <i class="fas fa-book-open me-2"></i>OpenLib.
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium text-uppercase small gap-3">
+                    <li class="nav-item"><a class="nav-link text-brown fw-bold" href="#">Kho Sách</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Tác Giả</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Cộng Đồng</a></li>
+                </ul>
+                <div class="ms-lg-4">
+                    <a href="#" class="btn btn-library btn-sm">Đăng Nhập</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-6">
+                    <span class="text-uppercase fw-bold text-secondary small letter-spacing-2">Thư viện số quốc gia</span>
+                    
+                    <h1 class="display-4 fw-black mt-2 mb-4 text-brown" style="line-height: 1.3;">
+                        Khơi Nguồn <br> <span style="background-color: #D4A373; color: white; padding: 0 10px;">Tri Thức</span> Vô Tận
+                    </h1>
+                    
+                    <p class="lead text-secondary mb-5">
+                        Truy cập hơn 100.000 đầu sách, tài liệu nghiên cứu và tạp chí khoa học miễn phí. Nền tảng học tập trọn đời dành cho mọi lứa tuổi.
+                    </p>
+
+                    <div class="d-flex gap-5 mb-5 ps-4 border-left-custom">
+                        <div>
+                            <h2 class="fw-bold m-0 text-brown">100k+</h2>
+                            <small class="text-secondary">Đầu sách</small>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold m-0 text-brown">50k+</h2>
+                            <small class="text-secondary">Độc giả</small>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold m-0 text-brown">Free</h2>
+                            <small class="text-secondary">Truy cập</small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-library shadow">Đọc Ngay</a>
+                        <a href="#" class="btn btn-outline-dark border-0 rounded-0 d-flex align-items-center">
+                            <i class="fas fa-search me-2"></i> Tìm sách
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="position-relative p-3">
+                        <img src="https://png.pngtree.com/background/20230317/original/pngtree-tree-popping-from-an-open-book-fantasy-painting-picture-cover-photography-picture-image_2150062.jpg" class="book-image" alt="Library">
+                        
+                        <div class="position-absolute bottom-0 start-0 bg-white p-4 shadow-lg border border-2 border-dark d-none d-md-block" style="max-width: 250px; margin-left: -20px; margin-bottom: 30px;">
+                            <i class="fas fa-quote-left text-warning fs-3 mb-2"></i>
+                            <p class="small fst-italic mb-0">"Một cuốn sách hay là một người bạn tốt."</p>
+                            <small class="fw-bold text-end d-block mt-2">- Victor Hugo</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-brown text-white py-5 text-center">
+        <div class="container">
+            <h3 class="fw-bold font-serif mb-3">Sẵn sàng mở mang tri thức?</h3>
+            <p class="opacity-75 mb-4">Đăng ký tài khoản miễn phí ngay hôm nay.</p>
+            <button class="btn btn-light text-brown fw-bold px-5">Tạo Tài Khoản</button>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center text-secondary small">
+        <div class="container">
+            <p class="m-0">© 2026 OpenLib Project. Educational Purposes Only.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
